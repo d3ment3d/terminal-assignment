@@ -6,17 +6,17 @@ SRC = main.cpp
 all: $(TARGET)
 
 $(TARGET): $(SRC)
-	@echo "Компиляция $(TARGET)..."
+	@echo "Compiling $(TARGET)..."
 	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
-	@echo "Сборка завершена успешно."
+	@echo "Build completed successfully."
 
 run: $(TARGET)
-	@echo "Запуск терминала..."
+	@echo "Running terminal..."
 	./$(TARGET)
 
 clean:
-	@echo "Очистка..."
+	@echo "Cleaning build files..."
 	rm -f $(TARGET)
-	@echo "Очистка завершена."
+	@echo "Clean completed."
 
 .PHONY: all clean run
